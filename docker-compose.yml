@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  icecast:
+    image: moul/icecast:latest
+    volumes:
+    - logs:/var/log/icecast2
+    - /etc/localtime:/etc/localtime:ro 
+    environment:
+    - ICECAST_SOURCE_PASSWORD=umnradio1077
+    - ICECAST_ADMIN_PASSWORD=umnradio1077
+    - ICECAST_PASSWORD=umnradio1077
+    - ICECAST_RELAY_PASSWORD=umnradio1077
+    ports:
+    - 8000:8000
+
+volumes:
+  logs:
